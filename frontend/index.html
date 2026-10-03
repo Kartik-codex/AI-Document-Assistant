@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Document Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <span class="logo-icon">📄</span>
+            <div>
+                <h1>AI Document Assistant</h1>
+                <p>Ask questions. Get answers from your documents.</p>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="upload-section">
+
+            <div class="section-heading">
+                <h2>Upload Document</h2>
+                <p>Upload a PDF to start asking questions.</p>
+            </div>
+
+            <div class="upload-box" id="uploadBox">
+
+                <div class="upload-icon">☁️</div>
+
+                <h3>Upload your PDF</h3>
+
+                <p>Drag and drop your document here</p>
+
+                <span>or</span>
+
+                <label for="pdfFile" class="browse-button">
+                    Browse File
+                </label>
+
+                <input
+                    type="file"
+                    id="pdfFile"
+                    accept=".pdf"
+                    hidden
+                >
+
+            </div>
+
+
+            <div class="file-info" id="fileInfo">
+
+                <span>📄</span>
+
+                <div class="file-details">
+                    <strong id="fileName">document.pdf</strong>
+                    <small id="fileStatus">Ready to upload</small>
+                </div>
+
+            </div>
+
+
+            <button id="uploadButton" class="upload-button">
+                Upload Document
+            </button>
+
+        </section>
+
+
+        <section class="question-section">
+
+            <div class="section-heading">
+                <h2>Ask Your Document</h2>
+                <p>Ask anything about the uploaded PDF.</p>
+            </div>
+
+
+            <div class="question-box">
+
+                <input
+                    type="text"
+                    id="questionInput"
+                    placeholder="e.g. What are the benefits of Artificial Intelligence?"
+                >
+
+                <button id="askButton">
+                    Ask
+                </button>
+
+            </div>
+
+
+            <div class="loading" id="loading">
+                Thinking...
+            </div>
+
+
+            <div class="answer-container" id="answerContainer">
+
+                <div class="answer-header">
+                    <span>✨</span>
+                    <h3>Answer</h3>
+                </div>
+
+                <p id="answerText">
+                    Your answer will appear here.
+                </p>
+
+
+                <div class="sources-section">
+
+                    <h4>Sources</h4>
+
+                    <div id="sourcesContainer">
+
+                        <div class="source-card">
+
+                            <span class="page-number">
+                                Page
+                            </span>
+
+                            <p>
+                                Source passages from your PDF will appear here.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            AI Document Assistant • Powered by RAG
+        </p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
